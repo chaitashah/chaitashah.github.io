@@ -47,6 +47,7 @@
       max-width: 1100px;
       margin: 0 auto;
       padding: 20px;
+      padding-top: 60px; /* Move content lower on page */
     }
 
     /* Intro Section */
@@ -59,8 +60,8 @@
     }
 
     .profile-img {
-      width: 40vw;
-      max-width: 350px;
+      width: 42vw; /* 5% bigger than before */
+      max-width: 370px; 
       aspect-ratio: 1 / 1;
       border-radius: 50%;
       object-fit: cover;
@@ -138,7 +139,7 @@
     @media (max-width: 900px) {
       .intro { flex-direction: column; align-items: center; text-align: center; }
       .intro-text { flex: unset; }
-      .profile-img { width: 45vw; max-width: 250px; }
+      .profile-img { width: 47vw; max-width: 250px; }
       .links a { width: 90px; height: 90px; font-size: 0.9rem; }
     }
 
@@ -152,7 +153,7 @@
       h1 { font-size: 4rem; }
       p { font-size: 1.4rem; }
       .links a { width: 130px; height: 130px; font-size: 1.15rem; }
-      .profile-img { width: 45vw; max-width: 400px; }
+      .profile-img { width: 47vw; max-width: 420px; }
     }
   </style>
 </head>
