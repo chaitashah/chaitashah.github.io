@@ -3,104 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chaitali Shah – Computer Science Engineer & Art Entrepreneur</title>
-  <meta name="description" content="Chaitali Shah is a computer science engineer and art entrepreneur based in Denver. She combines technical expertise with creative practice in art and photography.">
-  <link rel="canonical" href="https://chaitalishah.com">
+  <title>Chaitali Shah – Art Entrepreneur</title>
+  <meta name="description" content="Chaitali Shah is an Art Entrepreneur based in Denver, creating bespoke art pieces and sending them to homes nationwide.">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 50px auto;
-      text-align: center;
-      line-height: 1.6;
-      padding: 0 20px;
-      background-color: #343854;
-    }
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border: 5px solid #165996;
-    }
+  <!-- Open Graph Meta Tags for Social Sharing -->
+  <meta property="og:title" content="Chaitali Shah – Art Entrepreneur">
+  <meta property="og:description" content="Creating bespoke art pieces for real homes.">
+  <meta property="og:image" content="https://chaitalishah.com/preview-image.jpg">
+  <meta property="og:url" content="https://chaitalishah.com">
+  <meta property="og:type" content="website">
 
-    h1 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-      color: #ECFEA8;
-    }
-
-    p {
-      font-size: 1em;
-      color: #FFFFFF;
-    }
-
-    h3 {
-      color: #ECFEA8; /* same as name */
-      margin-top: 15px; /* reduced gap */
-      margin-bottom: 5px; /* smaller gap to links */
-    }
-
-   a {
-  color: #FFFFFF; /* default white */
-  text-decoration: underline;
-  transition: color 0.2s ease;
-}
-
-a:visited {
-  color: #ECFEA8 !important; /* same as name color */
-}
-
-a:hover {
-  color: #FFFFFF; /* keep hover same as default */
-}
-  </style>
-
+  <!-- JSON-LD Structured Data for SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Chaitali Shah",
-    "jobTitle": "Computer Science Engineer & Art Entrepreneur",
+    "jobTitle": "Art Entrepreneur",
     "url": "https://chaitalishah.com",
-    "image": "https://raw.githubusercontent.com/chaitashah/chaitashah.github.io/main/chaitalishah.jpg",
+    "description": "Art Entrepreneur creating bespoke art pieces and sending them to homes nationwide.",
     "sameAs": [
-      "https://instagram.com/cs.wrk",
-      "https://threads.net/@cs.wrk",
-      "https://about.me/chaitalishah",
-      "https://chaitalishah.carrd.co",
-      "https://vsco.co/chaitalishah/gallery"
-    ],
-    "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Denver",
-    "addressCountry": "US"
-  },
-    "description": "Chaitali Shah is a computer science engineer who has worked in IT for several years. She is passionate about art and photography. Currently an Art Entrepreneur, she brings together her unique combination of technical and creative skills to make things that work in the real world. Based in Denver, she enjoys the outdoors and visiting museums in her free time."
+      "https://www.instagram.com/yourhandle",
+      "https://www.etsy.com/shop/yourshop",
+      "https://www.linkedin.com/in/yourprofile"
+    ]
   }
   </script>
+
+  <style>
+    /* Reset and body */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      color: #222;
+      background: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Headings and text */
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      margin: 0.5em 0;
+    }
+    p {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      line-height: 1.6;
+      margin: 0.5em 0;
+    }
+
+    /* Links/buttons */
+    .links a {
+      display: inline-block;
+      margin: 0.5em;
+      padding: 0.8em 1.5em;
+      text-decoration: none;
+      color: white;
+      background: #000;
+      border-radius: 6px;
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+      transition: background 0.3s;
+    }
+    .links a:hover {
+      background: #333;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 800px) {
+      .links a {
+        padding: 1em;
+        width: 80%;
+      }
+    }
+    @media (max-width: 500px) {
+      .links a {
+        width: 100%;
+      }
+    }
+
+    /* Large screens / TV */
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 1100px;
+      }
+      h1 {
+        font-size: 4rem;
+      }
+      p {
+        font-size: 1.4rem;
+      }
+      .links a {
+        font-size: 1.2rem;
+        padding: 1em 2em;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <img src="https://raw.githubusercontent.com/chaitashah/chaitashah.github.io/main/chaitalishah.jpg" alt="Chaitali Shah" class="profile-pic">
+  <div class="container">
+    <h1>Hello.</h1>
+    <p><strong>Chaitali Shah</strong> is an Art Entrepreneur based in Denver.</p>
+    <p>When she’s not wandering through museums, discovering great restaurants, or going on long nature walks, she’s busy sending bespoke art pieces to their forever homes.</p>
+    <p>She graduated as a computer science engineer and applies her technical and creative skills to build and run her business — realising bespoke art pieces for real homes.</p>
 
-  <h1>Chaitali Shah</h1>
-
-  <p>
-   Chaitali Shah is an Art Entrepreneur based in Denver. When she’s not wandering through museums, discovering great restaurants, or going on long nature walks, she’s busy sending <a href="https://www.etsy.com/shop/bobaplans" target="_blank" rel="noopener">bespoke art pieces</a> to their forever homes.
-   She graduated as a computer science engineer, and uses her unique combination of technical know-how and creative imagination to realize her ideas into adornments for real homes.
-  </p>
-  
-  <section>
-    <h3>Profiles:</h3>
-    <a href="https://instagram.com/cs.wrk" target="_blank" rel="noopener">Instagram</a> |
-    <a href="https://threads.net/@cs.wrk" target="_blank" rel="noopener">Threads</a> |
-    <a href="https://about.me/chaitalishah" target="_blank" rel="noopener">About.me</a> |
-    <a href="https://chaitalishah.carrd.co" target="_blank" rel="noopener">Carrd.co</a> |
-    <a href="https://www.crunchbase.com/person/chaitalishah" target="_blank" rel="noopener">Crunchbase</a>
-  </section>
+    <div class="links">
+      <a href="https://www.etsy.com/shop/yourshop" target="_blank">Work (Etsy)</a>
+      <a href="https://www.instagram.com/yourhandle" target="_blank">Follow Me (Instagram)</a>
+      <a href="mailto:youremail@example.com">Say Hi</a>
+    </div>
+  </div>
 </body>
 </html>
