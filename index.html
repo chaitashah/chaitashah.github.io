@@ -184,6 +184,25 @@
   aspect-ratio: 1;
   object-fit: cover;
 }
+    .blog-item {
+  position: relative;
+}
+
+.blog-item img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blog-item:hover img {
+  transform: scale(1.05);
+}
+
+.blog-item p {
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
   </style>
 </head>
 
