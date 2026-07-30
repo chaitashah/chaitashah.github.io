@@ -137,6 +137,13 @@
     }
 
     /* Responsive */
+    @media (min-width: 701px) {
+  .blog-item:hover img {
+    transform: scale(2.3);
+    z-index: 100;
+    position: relative;
+  }
+}
     @media (max-width: 900px) {
   .intro { flex-direction: column; align-items: center; text-align: center; }
   .intro-text { flex: unset; }
@@ -199,13 +206,8 @@ blog-grid {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  transition: all 0.3s ease;
-}
-
-.blog-item:hover img {
-  aspect-ratio: auto;
-  object-fit: contain;
-  transform: scale(2);
+  transition: transform 0.2s ease;
+  border-radius: 12px;
 }
 .blog-item p {
   display: block;
