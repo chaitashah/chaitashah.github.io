@@ -137,9 +137,11 @@
     }
 
     /* Responsive */
-  @media (min-width: 701px) {
+ @media (min-width: 701px) {
   .blog-item:hover img {
-    transform: scale(2.7);
+    transform: scale(1.5);
+    aspect-ratio: auto;
+    object-fit: contain;
     z-index: 100;
     position: relative;
   }
