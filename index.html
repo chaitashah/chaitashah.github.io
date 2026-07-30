@@ -56,7 +56,9 @@
 
     /* Intro Section */
    .intro {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
     .profile-img {
@@ -159,8 +161,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  align-items: start;
 }
-
 @media (max-width: 900px) {
   .main-layout {
     grid-template-columns: 1fr;
@@ -174,7 +176,6 @@
   <div class="main-layout">
 
     <div class="intro">
-    </div>
       <img src="https://raw.githubusercontent.com/chaitashah/chaitashah.github.io/main/chaitalishah.jpg" alt="Chaitali Shah" class="profile-img">
       <div class="intro-text">
         <h1>Hello.</h1>
@@ -182,10 +183,11 @@
         <p>Currently, building an art business sending bespoke pieces shipped all across the U.S., blending her computer science background with creative imagination to bring ideas to life.</p>
         <p>When she’s not wandering through museums, discovering great restaurants, or taking nature walks, she’s busy working with colors in her studio.</p>
       </div>
-    </div>
-<div class="personal-blog">
+     </div>
+    <div class="personal-blog">
   <h2>Personal Blog</h2>
 </div>
+    </div>
     <div class="links">
       <a href="https://www.etsy.com/shop/Bobaplans" class="work" target="_blank">Work</a>
       <a href="https://vsco.co/chaitalishah/gallery" class="photography" target="_blank">Photos</a>
