@@ -199,13 +199,13 @@ blog-grid {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  transition: transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .blog-item:hover img {
-  transform: scale(1.8);
-  z-index: 100;
-  position: relative;
+  aspect-ratio: auto;
+  object-fit: contain;
+  transform: scale(1.2);
 }
 .blog-item p {
   display: block;
