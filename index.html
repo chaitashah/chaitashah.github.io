@@ -179,29 +179,25 @@
   gap: 8px;
 }
 
-.blog-grid img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
+blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
 }
- .blog-item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+
+.blog-item {
+  display: block;
 }
 
 .blog-item img {
+  display: block;
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.blog-item:hover img {
-  transform: scale(1.05);
 }
 
 .blog-item p {
+  display: block;
   font-size: 0.8rem;
   margin-top: 5px;
 }
@@ -223,15 +219,18 @@
      </div>
     <div class="personal-blog">
   <h2>Personal Blog</h2>
-
   <div class="blog-grid">
- <img src="images/blog/photo1.jpg">
-  <p>A new bloom each day, sometimes three! Endless party!</p>
-<img src="images/blog/photo2.jpg">
-    <p>Filter Coffee</p>
-<img src="images/blog/photo3.jpg">
-    <p>Caption for this photo</p>
+
+  <div class="blog-item">
+    <img src="images/blog/photo1.jpg">
+    <p>A new bloom each day, sometimes three! Endless party!</p>
   </div>
+
+  <div class="blog-item">
+    <img src="images/blog/photo2.jpg">
+    <p>Filter Coffee</p>
+  </div>
+
 </div>
     </div>
     <div class="links">
