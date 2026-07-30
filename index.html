@@ -192,15 +192,21 @@ blog-grid {
 
 .blog-item {
   display: block;
+  overflow: visible;
 }
 
 .blog-item img {
-  display: block;
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
+  transition: transform 0.2s ease;
 }
 
+.blog-item:hover img {
+  transform: scale(1.8);
+  z-index: 100;
+  position: relative;
+}
 .blog-item p {
   display: block;
   font-size: 0.8rem;
