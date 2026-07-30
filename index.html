@@ -159,6 +159,17 @@
       .links a { width: 130px; height: 130px; font-size: 1.15rem; }
       .profile-img { width: 47vw; max-width: 420px; }
     }
+    .main-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 
