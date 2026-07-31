@@ -285,27 +285,38 @@
     }
 
     @media (max-width: 700px) {
-      .main-layout {
-        grid-template-columns: 1fr;
-      }
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
 
-      footer {
-        flex-wrap: wrap;
-        gap: 15px;
-        text-align: center;
-      }
+  .intro {
+    order: 1;
+  }
 
-      footer .socials {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 18px;
-      }
+  .links {
+    order: 2;
+  }
 
-      footer .copyright {
-        width: auto;
-      }
-    }
+  .personal-blog {
+    order: 3;
+  }
 
+  footer {
+    flex-wrap: wrap;
+    gap: 15px;
+    text-align: center;
+  }
+
+  footer .socials {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  footer .copyright {
+    width: auto;
+  }
+}
     @media (max-width: 500px) {
       .profile-img {
         width: 220px;
