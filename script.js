@@ -26,3 +26,15 @@ fetch("stories.json")
       <img src="${story.image}" alt="Story">
     `;
   });
+
+const storyViewer = document.getElementById("story-viewer");
+const storyImageLarge = document.getElementById("story-image-large");
+
+storyCircle.addEventListener("click", () => {
+  storyImageLarge.src = story.image;
+  storyViewer.style.display = "flex";
+});
+
+storyViewer.addEventListener("click", () => {
+  storyViewer.style.display = "none";
+});
