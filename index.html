@@ -46,7 +46,7 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: #EBE9E5;
       color: #222222;
       min-height: 100vh;
@@ -59,16 +59,16 @@
        2. Layout & Container
        ========================================================================== */
     .container {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 30px 20px 20px 20px;
+      padding: 50px 20px 30px 20px;
       width: 100%;
     }
 
     .main-layout {
       display: grid;
-      grid-template-columns: 60% 40%;
-      gap: 30px;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 40px 60px;
       align-items: start;
     }
 
@@ -80,30 +80,34 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      gap: 20px;
     }
 
     .profile-img {
-      width: 180px;
-      aspect-ratio: 1 / 1;
+      width: 170px;
+      height: 170px;
       border-radius: 50%;
       object-fit: cover;
+      margin-bottom: 25px;
     }
 
     .intro-text {
-      max-width: 510px;
+      width: 100%;
+      max-width: 480px;
     }
 
     h1 {
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      margin-bottom: 10px;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      margin-bottom: 15px;
       color: #000000;
+      font-weight: 700;
+      letter-spacing: -0.5px;
     }
 
     p {
-      font-size: clamp(0.85rem, 2vw, 1rem);
-      line-height: 1.6;
-      margin-bottom: 12px;
+      font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+      line-height: 1.65;
+      margin-bottom: 16px;
+      color: #333333;
     }
 
     p strong {
@@ -111,41 +115,41 @@
     }
 
     .handle {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #7A6B5D;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     /* ==========================================================================
-       4. Action Links (Bubbles)
+       4. Action Links (Bubbles) - Centered Across Bottom
        ========================================================================== */
     .links {
+      grid-column: 1 / -1;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 25px;
-      margin: 30px 0;
-      grid-column: 1;
+      gap: 30px;
+      margin: 20px 0 10px 0;
     }
 
     .links a {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 110px;
-      height: 110px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 1rem;
       color: #000000;
       border: 2px solid #000000;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
     }
 
     .links a:hover {
-      transform: scale(1.15);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     }
 
     .work { background-color: #ECFEA8; }
@@ -157,114 +161,122 @@
        ========================================================================== */
     .personal-blog {
       text-align: left;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .personal-blog h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 4px;
     }
 
     .personal-blog .handle {
-  margin-left: 0;
-}
-
-.story-circle {
-  margin-left: 0;
-}
-
-    .personal-blog h2 {
-      margin-bottom: 8px;
+      margin-left: 0;
     }
 
     .story-circle {
-  width: 70px;
-  height: 70px;
-  margin: 10px 0 20px 0;
-  border-radius: 50%;
-  padding: 3px;
-  background: #D94F8A;
-  cursor: pointer;
-}
+      width: 65px;
+      height: 65px;
+      margin: 5px 0 25px 0;
+      border-radius: 50%;
+      padding: 3px;
+      background: #D94F8A;
+      cursor: pointer;
+      display: inline-block;
+    }
 
-.story-circle img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #EBE9E5;
-}
+    .story-circle img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #EBE9E5;
+    }
 
     .story-viewer {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
 
-.story-viewer img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 16px;
-}
+    .story-viewer img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 16px;
+    }
 
     .thoughts-card {
-      width: 95%;
-      margin: 0 0 40px 0;
-      padding: 20px;
-      border: 1px solid #DDDDDD;
+      width: 100%;
+      margin-bottom: 35px;
+      padding: 22px 24px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background-color: rgba(255, 255, 255, 0.25);
       border-radius: 16px;
       text-align: left;
     }
 
     .thoughts-card h3 {
       margin-top: 0;
-      font-size: 1rem;
+      font-size: 1.1rem;
+      font-weight: 700;
     }
 
     .thoughts-card p {
-      font-size: 1rem;
-      margin: 15px 0;
+      font-size: 0.95rem;
+      margin: 12px 0;
     }
 
     .tweet-handle {
       color: #1DA1F2;
-      font-size: 0.85rem;
-      margin-top: 15px;
-      margin-bottom: 10px;
+      font-size: 0.9rem;
+      margin-top: 4px;
     }
 
     .tweet-icons {
       color: #1DA1F2;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       cursor: default;
+      letter-spacing: 2px;
     }
 
     .blog-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
+      gap: 12px;
     }
 
     .blog-item {
       display: block;
+      text-decoration: none;
+      color: inherit;
     }
 
     .blog-item img {
       width: 100%;
       aspect-ratio: 1;
       object-fit: cover;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
       border-radius: 12px;
     }
     
-   @media (min-width: 901px) {
-  .blog-item img:hover {
-    transform: scale(1.8);
-  }
-}
+    @media (min-width: 901px) {
+      .blog-item img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      }
+    }
 
     .blog-item p {
       display: block;
       font-size: 0.8rem;
-      margin-top: 5px;
+      margin-top: 6px;
+      line-height: 1.3;
+      color: #444;
     }
 
     /* ==========================================================================
@@ -276,26 +288,24 @@
       align-items: center;
       gap: 35px;
       width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 20px;
+      max-width: 1000px;
+      margin: 40px auto 0 auto;
+      padding: 25px 20px;
       font-size: 0.95rem;
+      border-top: 1px solid rgba(0,0,0,0.05);
     }
 
     footer .socials {
       display: flex;
-      gap: 22px;
+      gap: 25px;
       align-items: center;
     }
 
     footer .socials a {
       color: #222222;
       text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer .socials a:visited {
-      color: #222222;
+      font-weight: 700;
+      transition: color 0.2s ease;
     }
 
     footer .socials a:hover {
@@ -304,65 +314,52 @@
 
     footer .copyright {
       white-space: nowrap;
-      font-weight: normal;
+      color: #555555;
     }
 
     /* ==========================================================================
        7. Responsive Breakpoints
        ========================================================================== */
-    @media (min-width: 1200px) {
-      h1 { font-size: 4rem; }
-      p { font-size: 1.2rem; }
-      .links a { width: 130px; height: 130px; font-size: 1.15rem; }
-    }
+    @media (max-width: 850px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
 
-    @media (max-width: 900px) {
+      .intro {
+        order: 1;
+      }
+
+      .personal-blog {
+        order: 2;
+      }
+
+      .links {
+        order: 3;
+      }
+
       .thoughts-card {
-        display: none;
+        display: block;
       }
+
       .links a {
-        width: 90px;
-        height: 90px;
-        font-size: 0.9rem;
+        width: 100px;
+        height: 100px;
+        font-size: 0.95rem;
       }
     }
 
-    @media (max-width: 700px) {
-  .main-layout {
-    grid-template-columns: 1fr;
-  }
+    @media (max-width: 600px) {
+      footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
 
-  .intro {
-    order: 1;
-  }
-
-  .links {
-    order: 2;
-  }
-
-  .personal-blog {
-    order: 3;
-  }
-
-  footer {
-    flex-wrap: wrap;
-    gap: 15px;
-    text-align: center;
-  }
-
-  footer .socials {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 18px;
-  }
-
-  footer .copyright {
-    width: auto;
-  }
-}
-    @media (max-width: 500px) {
-      .profile-img {
-        width: 220px;
+      footer .socials {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
       }
     }
   </style>
