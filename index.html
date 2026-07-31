@@ -46,7 +46,7 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #EBE9E5;
       color: #222222;
       min-height: 100vh;
@@ -59,16 +59,17 @@
        2. Layout & Container
        ========================================================================== */
     .container {
-      max-width: 1000px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 50px 20px 30px 20px;
+      padding: 40px 24px;
       width: 100%;
+      flex-grow: 1;
     }
 
     .main-layout {
       display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 40px 60px;
+      grid-template-columns: 1fr 310px;
+      gap: 60px;
       align-items: start;
     }
 
@@ -80,76 +81,69 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
+      gap: 18px;
     }
 
     .profile-img {
-      width: 170px;
-      height: 170px;
+      width: 155px;
+      height: 155px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 25px;
     }
 
     .intro-text {
-      width: 100%;
       max-width: 480px;
+      margin: 0 auto;
     }
 
     h1 {
-      font-size: clamp(2.2rem, 4vw, 3.2rem);
-      margin-bottom: 15px;
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      margin-bottom: 12px;
       color: #000000;
       font-weight: 700;
       letter-spacing: -0.5px;
     }
 
     p {
-      font-size: clamp(0.95rem, 1.8vw, 1.05rem);
-      line-height: 1.65;
-      margin-bottom: 16px;
-      color: #333333;
+      font-size: clamp(0.9rem, 1.2vw, 0.98rem);
+      line-height: 1.55;
+      margin-bottom: 12px;
     }
 
     p strong {
       color: #000000;
     }
 
-    .handle {
-      font-size: 1.1rem;
-      color: #7A6B5D;
-      margin-bottom: 15px;
-    }
-
     /* ==========================================================================
-       4. Action Links (Bubbles) - Centered Across Bottom
+       4. Action Links (Bubbles)
        ========================================================================== */
     .links {
-      grid-column: 1 / -1;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
-      margin: 20px 0 10px 0;
+      gap: 18px;
+      margin-top: 20px;
+      width: 100%;
     }
 
     .links a {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 120px;
-      height: 120px;
+      width: 95px;
+      height: 95px;
       border-radius: 50%;
       text-decoration: none;
-      font-weight: 700;
-      font-size: 1rem;
+      font-weight: bold;
+      font-size: 0.9rem;
       color: #000000;
-      border: 2px solid #000000;
-      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+      border: 1.5px solid #000000;
+      transition: transform 0.25 ease, box-shadow 0.25s ease;
     }
 
     .links a:hover {
-      transform: translateY(-4px) scale(1.05);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      transform: scale(1.06);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     }
 
     .work { background-color: #ECFEA8; }
@@ -165,25 +159,59 @@
       flex-direction: column;
     }
 
-    .personal-blog h2 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 4px;
+    .thoughts-card {
+      width: 100%;
+      margin-bottom: 28px;
+      padding: 18px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background-color: rgba(255, 255, 255, 0.25);
+      border-radius: 14px;
+      text-align: left;
     }
 
-    .personal-blog .handle {
-      margin-left: 0;
+    .thoughts-card h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 3px;
+    }
+
+    .tweet-handle {
+      color: #1DA1F2;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+
+    .thoughts-card p {
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    .tweet-icons {
+      color: #1DA1F2;
+      font-size: 0.8rem;
+      cursor: default;
+    }
+
+    .personal-blog h2 {
+      font-size: 1.2rem;
+      margin-bottom: 2px;
+      font-weight: bold;
+    }
+
+    .handle {
+      font-size: 0.88rem;
+      color: #7A6B5D;
+      margin-bottom: 10px;
     }
 
     .story-circle {
-      width: 65px;
-      height: 65px;
-      margin: 5px 0 25px 0;
+      width: 60px;
+      height: 60px;
+      margin-bottom: 18px;
       border-radius: 50%;
-      padding: 3px;
+      padding: 2.5px;
       background: #D94F8A;
       cursor: pointer;
-      display: inline-block;
     }
 
     .story-circle img {
@@ -210,44 +238,10 @@
       border-radius: 16px;
     }
 
-    .thoughts-card {
-      width: 100%;
-      margin-bottom: 35px;
-      padding: 22px 24px;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      background-color: rgba(255, 255, 255, 0.25);
-      border-radius: 16px;
-      text-align: left;
-    }
-
-    .thoughts-card h3 {
-      margin-top: 0;
-      font-size: 1.1rem;
-      font-weight: 700;
-    }
-
-    .thoughts-card p {
-      font-size: 0.95rem;
-      margin: 12px 0;
-    }
-
-    .tweet-handle {
-      color: #1DA1F2;
-      font-size: 0.9rem;
-      margin-top: 4px;
-    }
-
-    .tweet-icons {
-      color: #1DA1F2;
-      font-size: 0.85rem;
-      cursor: default;
-      letter-spacing: 2px;
-    }
-
     .blog-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+      gap: 8px;
     }
 
     .blog-item {
@@ -260,23 +254,21 @@
       width: 100%;
       aspect-ratio: 1;
       object-fit: cover;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border-radius: 12px;
+      transition: transform 0.2s ease;
+      border-radius: 10px;
     }
-    
-    @media (min-width: 901px) {
+
+    @media (min-width: 1025px) {
       .blog-item img:hover {
         transform: scale(1.05);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       }
     }
 
     .blog-item p {
-      display: block;
-      font-size: 0.8rem;
-      margin-top: 6px;
-      line-height: 1.3;
-      color: #444;
+      font-size: 0.72rem;
+      line-height: 1.25;
+      margin-top: 5px;
+      color: #333;
     }
 
     /* ==========================================================================
@@ -286,26 +278,24 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 35px;
+      gap: 24px;
       width: 100%;
-      max-width: 1000px;
-      margin: 40px auto 0 auto;
-      padding: 25px 20px;
-      font-size: 0.95rem;
-      border-top: 1px solid rgba(0,0,0,0.05);
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 20px;
+      font-size: 0.85rem;
     }
 
     footer .socials {
       display: flex;
-      gap: 25px;
+      gap: 18px;
       align-items: center;
     }
 
     footer .socials a {
       color: #222222;
       text-decoration: none;
-      font-weight: 700;
-      transition: color 0.2s ease;
+      font-weight: bold;
     }
 
     footer .socials a:hover {
@@ -320,10 +310,34 @@
     /* ==========================================================================
        7. Responsive Breakpoints
        ========================================================================== */
-    @media (max-width: 850px) {
+    
+    /* iPad / Tablet Layout (Portrait & Landscape) */
+    @media (max-width: 992px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      .main-layout {
+        grid-template-columns: 1fr 260px;
+        gap: 32px;
+      }
+
+      .links a {
+        width: 85px;
+        height: 85px;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Mobile Layout */
+    @media (max-width: 768px) {
+      .container {
+        padding: 24px 16px;
+      }
+
       .main-layout {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 36px;
       }
 
       .intro {
@@ -332,34 +346,52 @@
 
       .personal-blog {
         order: 2;
+        align-items: center;
+        text-align: center;
       }
 
-      .links {
-        order: 3;
-      }
-
+      /* Hide Thoughts Card strictly on Mobile */
       .thoughts-card {
-        display: block;
+        display: none !important;
       }
 
-      .links a {
-        width: 100px;
-        height: 100px;
-        font-size: 0.95rem;
+      .blog-grid {
+        max-width: 320px;
+        margin: 0 auto;
       }
-    }
 
-    @media (max-width: 600px) {
+      .blog-item p {
+        text-align: left;
+      }
+
       footer {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
         text-align: center;
+        padding-top: 10px;
       }
 
       footer .socials {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 18px;
+        gap: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .profile-img {
+        width: 135px;
+        height: 135px;
+      }
+
+      .links a {
+        width: 80px;
+        height: 80px;
+        font-size: 0.8rem;
+      }
+
+      .links {
+        gap: 10px;
       }
     }
   </style>
@@ -369,15 +401,23 @@
   <div class="container">
     <main class="main-layout">
       
-      <!-- Left Column: Intro -->
+      <!-- Left Column: Intro & Navigation -->
       <section class="intro">
         <img src="https://raw.githubusercontent.com/chaitashah/chaitashah.github.io/main/chaitalishah.jpg" alt="Chaitali Shah" class="profile-img">
+        
         <div class="intro-text">
           <h1>Hello.</h1>
           <p><strong>Chaitali Shah</strong> is an Art Entrepreneur based in Denver.</p>
           <p>Currently, building an art business sending bespoke pieces shipped all across the U.S., blending her computer science background with creative imagination to bring ideas to life.</p>
           <p>When she’s not wandering through museums, discovering great restaurants, or taking nature walks, she’s busy working with colors in her studio.</p>
         </div>
+
+        <!-- Action Links -->
+        <nav class="links" aria-label="Main Navigation Links">
+          <a href="https://www.etsy.com/shop/Bobaplans" class="work" target="_blank" rel="noopener noreferrer">Work</a>
+          <a href="https://vsco.co/chaitalishah/gallery" class="photography" target="_blank" rel="noopener noreferrer">Photos</a>
+          <a href="mailto:hello@chaitalishah.com" class="sayhi">Say Hi</a>
+        </nav>
       </section>
 
       <!-- Right Column: Blog & Thoughts -->
@@ -399,13 +439,6 @@
         </div>
         <div class="blog-grid" id="blog-grid"></div>
       </section>
-
-      <!-- Centered Action Links -->
-      <nav class="links" aria-label="Main Navigation Links">
-        <a href="https://www.etsy.com/shop/Bobaplans" class="work" target="_blank" rel="noopener noreferrer">Work</a>
-        <a href="https://vsco.co/chaitalishah/gallery" class="photography" target="_blank" rel="noopener noreferrer">Photos</a>
-        <a href="mailto:hello@chaitalishah.com" class="sayhi">Say Hi</a>
-      </nav>
 
     </main>
   </div>
