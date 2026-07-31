@@ -100,7 +100,7 @@
     }
 
     p {
-      font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+      font-size: clamp(0.85rem, 2vw, 1rem);
       line-height: 1.6;
       margin-bottom: 12px;
     }
@@ -211,6 +211,12 @@
       transition: transform 0.2s ease;
       border-radius: 12px;
     }
+    
+    @media (min-width: 901px) {
+  .blog-item img:hover {
+    transform: scale(1.05);
+  }
+}
 
     .blog-item p {
       display: block;
@@ -263,7 +269,7 @@
        ========================================================================== */
     @media (min-width: 1200px) {
       h1 { font-size: 4rem; }
-      p { font-size: 1.4rem; }
+      p { font-size: 1.2rem; }
       .links a { width: 130px; height: 130px; font-size: 1.15rem; }
     }
 
