@@ -181,6 +181,22 @@
   border: 3px solid #EBE9E5;
 }
 
+    .story-viewer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.story-viewer img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 16px;
+}
+
     .thoughts-card {
       width: 95%;
       margin: 0 auto 40px auto;
@@ -373,6 +389,9 @@
         <h2>Personal Blog</h2>
         <div class="handle">@Chaitali</div>
         <div class="story-circle" id="story-circle"></div>
+        <div class="story-viewer" id="story-viewer">
+           <img id="story-image-large" src="" alt="Story">
+        </div>
         <div class="blog-grid" id="blog-grid"></div>
       </section>
 
