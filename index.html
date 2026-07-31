@@ -205,8 +205,8 @@
       cursor: default;
     }
 
-    /* Footer */
-  footer {
+/* Footer */
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -216,6 +216,11 @@
   margin: 0 auto;
   padding: 20px;
   font-size: 0.95rem;
+}
+
+footer .socials {
+  display: flex;
+  gap: 15px;
 }
 
 footer .socials a {
@@ -234,6 +239,25 @@ footer .socials a:hover {
 
 footer .copyright {
   white-space: nowrap;
+}
+
+/* Mobile footer */
+@media (max-width: 700px) {
+  footer {
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
+  }
+
+  footer .socials {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  footer .copyright {
+    width: 100%;
+  }
 }
     /* Responsive Queries */
     @media (max-width: 900px) {
