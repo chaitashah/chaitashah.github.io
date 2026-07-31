@@ -15,3 +15,14 @@ fetch("photos.json")
       grid.appendChild(item);
     });
   });
+
+fetch("stories.json")
+  .then(response => response.json())
+  .then(stories => {
+    const story = stories[0];
+    const storyCircle = document.getElementById("story-circle");
+
+    storyCircle.innerHTML = `
+      <img src="${story.image}" alt="Story">
+    `;
+  });
