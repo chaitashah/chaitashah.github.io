@@ -15,27 +15,34 @@
 
   <!-- JSON-LD SEO -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Chaitali Shah",
-  "jobTitle": "Art Entrepreneur",
-  "url": "https://chaitalishah.com",
-  "description": "Art Entrepreneur creating bespoke art pieces and sending them to homes nationwide.",
-  "sameAs": [
-    "https://www.instagram.com/cs.wrk",
-    "https://www.instagram.com/bobaplans",
-    "https://www.instagram.com/chtlsh",
-    "https://www.etsy.com/shop/Bobaplans",
-    "https://vsco.co/chaitalishah/gallery",
-    "https://www.threads.com/shop/cs.wrk",
-    "https://www.linkedin.com/in/chaitashah/"
-  ]
-}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Chaitali Shah",
+    "jobTitle": "Art Entrepreneur",
+    "url": "https://chaitalishah.com",
+    "description": "Art Entrepreneur creating bespoke art pieces and sending them to homes nationwide.",
+    "sameAs": [
+      "https://www.instagram.com/cs.wrk",
+      "https://www.instagram.com/bobaplans",
+      "https://www.instagram.com/chtlsh",
+      "https://www.etsy.com/shop/Bobaplans",
+      "https://vsco.co/chaitalishah/gallery",
+      "https://www.threads.com/shop/cs.wrk",
+      "https://www.linkedin.com/in/chaitashah/"
+    ]
+  }
+  </script>
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    /* CSS Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Base Styles */
     body {
       font-family: Arial, sans-serif;
       background: #EBE9E5;
@@ -44,33 +51,40 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      text-align: left;
     }
 
     .container {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px;
-       padding-top: 30px; /* Move content lower on page */
+      padding: 30px 20px 20px 20px;
+      width: 100%;
+    }
+
+    .main-layout {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      gap: 30px;
+      align-items: start;
     }
 
     /* Intro Section */
-   .intro {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
 
-  .profile-img {
-  width: 300px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  object-fit: cover;
-}
+    .profile-img {
+      width: 300px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      object-fit: cover;
+    }
 
     .intro-text {
-   flex: 1;
-  max-width: 600px;
+      max-width: 600px;
     }
 
     h1 {
@@ -80,18 +94,25 @@
     }
 
     p {
-     font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+      font-size: clamp(0.95rem, 2.2vw, 1.1rem);
       line-height: 1.6;
       margin-bottom: 12px;
     }
 
-    /* Buttons */
+    .handle {
+      font-size: 1.2rem;
+      color: #7A6B5D;
+      margin-bottom: 20px;
+    }
+
+    /* Action Buttons */
     .links {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 25px;
-      margin-bottom: 40px;
+      margin: 30px 0;
+      grid-column: 1 / -1;
     }
 
     .links a {
@@ -118,14 +139,81 @@
     .photography { background-color: #CCF7FF; }
     .sayhi { background-color: #D2C6FA; }
 
+    /* Personal Blog & Grid */
+    .personal-blog {
+      text-align: center;
+    }
+
+    .personal-blog h2 {
+      margin-bottom: 8px;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .blog-item {
+      display: block;
+    }
+
+    .blog-item img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      transition: transform 0.2s ease;
+      border-radius: 12px;
+    }
+
+    .blog-item p {
+      display: block;
+      font-size: 0.8rem;
+      margin-top: 5px;
+    }
+
+    /* Thoughts Card */
+    .thoughts-card {
+      width: 95%;
+      margin: 0 auto 40px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 16px;
+      text-align: left;
+    }
+
+    .thoughts-card h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .thoughts-card p {
+      font-size: 1rem;
+      margin: 15px 0;
+    }
+
+    .tweet-handle {
+      color: #1DA1F2;
+      font-size: 0.85rem;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+
+    .tweet-icons {
+      color: #1DA1F2;
+      font-size: 0.9rem;
+      cursor: default;
+    }
+
     /* Footer */
     footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      width: 100%;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 15px 20px;
+      padding: 20px;
       font-size: 0.95rem;
     }
 
@@ -136,180 +224,89 @@
       color: #000;
     }
 
-    /* Responsive */
- @media (min-width: 701px) {
-  .blog-item:hover img {
-    transform: scale(1.7);
-    aspect-ratio: auto;
-    object-fit: contain;
-    z-index: 100;
-    position: relative;
-  }
-}
+    /* Responsive Queries */
     @media (max-width: 900px) {
-  .intro { flex-direction: column; align-items: center; text-align: center; }
-  .intro-text { flex: unset; }
-  .links a { width: 90px; height: 90px; font-size: 0.9rem; }
-}
+      .thoughts-card {
+        display: none;
+      }
+      .links a {
+        width: 90px;
+        height: 90px;
+        font-size: 0.9rem;
+      }
+    }
 
-@media (max-width: 500px) {
-  .profile-img {
-    width: 220px;
-  }
-}
+    @media (max-width: 700px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+    }
 
-@media (min-width: 1200px) {
-  h1 { font-size: 4rem; }
-  p { font-size: 1.4rem; }
-  .links a { width: 130px; height: 130px; font-size: 1.15rem; }
-}
-   .main-layout {
-  display: grid;
-  grid-template-columns: 60% 40%;
-  gap: 30px;
-  align-items: start;
-}
+    @media (max-width: 500px) {
+      .profile-img {
+        width: 220px;
+      }
+    }
 
-@media (max-width: 700px) {
-  .main-layout {
-    grid-template-columns: 1fr;
-  }
-}
-    @media (max-width: 900px) {
-  .thoughts-card {
-    display: none;
-  }
-}
-
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-    .handle {
-  font-size: 1.2rem;
-  color: #7A6B5D;
-  margin-bottom: 20px;
-}
-    .blog-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
-
-blog-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
-
-.blog-item {
-  display: block;
-  overflow: visible;
-}
-
-.blog-item img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  transition: transform 0.2s ease;
-  border-radius: 12px;
-}
-.blog-item p {
-  display: block;
-  font-size: 0.8rem;
-  margin-top: 5px;
-}
-    .thoughts-card {
-  width: 80%;
-  width: 95%;
-  margin: 0 auto 40px auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 16px;
-  text-align: left;
-}
-
-.thoughts-card h3 {
-  margin-top: 0;
-  font-size: 1rem;
-}
-
-.thoughts-card p {
-  font-size: 1rem;
-  margin: 15px 0;
-}
-
-.tweet-handle {
-  color: #1DA1F2;
-  font-size: 0.85rem;
- margin-top: 15px;
-  margin-bottom: 10px;
-}
-
-.tweet-icons {
-  color: #1DA1F2;
-  font-size: 0.9rem;
-  cursor: default;
-}
-    .personal-blog {
-  text-align: center;
-}
-
-.personal-blog h2 {
-  margin-bottom: 8px;
-}
-
+    @media (min-width: 1200px) {
+      h1 { font-size: 4rem; }
+      p { font-size: 1.4rem; }
+      .links a { width: 130px; height: 130px; font-size: 1.15rem; }
+    }
   </style>
 </head>
 
 <body>
-<div class="container">
-  <div class="main-layout">
-
-    <div class="intro">
-      <img src="https://raw.githubusercontent.com/chaitashah/chaitashah.github.io/main/chaitalishah.jpg" alt="Chaitali Shah" class="profile-img">
-      <div class="intro-text">
-        <h1>Hello.</h1>
-        <p><strong style="color:#000000;">Chaitali Shah</strong> is an Art Entrepreneur based in Denver.</p>
-        <p>Currently, building an art business sending bespoke pieces shipped all across the U.S., blending her computer science background with creative imagination to bring ideas to life.</p>
-        <p>When she’s not wandering through museums, discovering great restaurants, or taking nature walks, she’s busy working with colors in her studio.</p>
+  <div class="container">
+    <div class="main-layout">
+      
+      <!-- Left Column: Intro -->
+      <div class="intro">
+        <img src="https://raw.githubusercontent.com/chaitashah/chaitashah.github.io/main/chaitalishah.jpg" alt="Chaitali Shah" class="profile-img">
+        <div class="intro-text">
+          <h1>Hello.</h1>
+          <p><strong style="color: #000000;">Chaitali Shah</strong> is an Art Entrepreneur based in Denver.</p>
+          <p>Currently, building an art business sending bespoke pieces shipped all across the U.S., blending her computer science background with creative imagination to bring ideas to life.</p>
+          <p>When she’s not wandering through museums, discovering great restaurants, or taking nature walks, she’s busy working with colors in her studio.</p>
+        </div>
       </div>
-     </div>
-   <div class="personal-blog">
 
-  <div class="thoughts-card">
-  <h3>Thoughts</h3>
-  <div class="tweet-handle">@cs</div>
+      <!-- Right Column: Blog & Thoughts -->
+      <div class="personal-blog">
+        <div class="thoughts-card">
+          <h3>Thoughts</h3>
+          <div class="tweet-handle">@cs</div>
+          <p>Something exciting is coming soon.</p>
+          <div class="tweet-icons">
+            ♡ 57 &nbsp;&nbsp; ↻ 83 &nbsp;&nbsp; ☆ 41
+          </div>
+        </div>
 
-  <p>Something exciting is coming soon.</p>
+        <h2>Personal Blog</h2>
+        <div class="handle">@Chaitali</div>
+        <div class="blog-grid" id="blog-grid"></div>
+      </div>
 
-  <div class="tweet-icons">
-    ♡ 57 &nbsp;&nbsp; ↻ 83 &nbsp;&nbsp; ☆ 41
-  </div>
-</div>
+      <!-- Centered Action Links -->
+      <div class="links">
+        <a href="https://www.etsy.com/shop/Bobaplans" class="work" target="_blank" rel="noopener">Work</a>
+        <a href="https://vsco.co/chaitalishah/gallery" class="photography" target="_blank" rel="noopener">Photos</a>
+        <a href="mailto:hello@chaitalishah.com" class="sayhi">Say Hi</a>
+      </div>
 
-  <h2>Personal Blog</h2>
-  <div class="handle">@Chaitali</div>
-  <div class="blog-grid" id="blog-grid"></div>
-    </div>
-    <div class="links">
-      <a href="https://www.etsy.com/shop/Bobaplans" class="work" target="_blank">Work</a>
-      <a href="https://vsco.co/chaitalishah/gallery" class="photography" target="_blank">Photos</a>
-      <a href="mailto:hello@chaitalishah.com" class="sayhi">Say Hi</a>
     </div>
   </div>
 
   <footer>
     <div class="socials">
-      <a href="https://www.instagram.com/bobaplans" target="_blank">Shop</a>
-      <a href="https://www.instagram.com/cs.wrk" target="_blank">Instagram</a>
-      <a href="https://www.threads.com/cs.wrk" target="_blank">Threads</a>
-      <a href="https://www.linkedin.com/in/chaitashah/" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/bobaplans" target="_blank" rel="noopener">Shop</a>
+      <a href="https://www.instagram.com/cs.wrk" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.threads.com/cs.wrk" target="_blank" rel="noopener">Threads</a>
+      <a href="https://www.linkedin.com/in/chaitashah/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
     <div class="copyright">© 2026 Chaitali Shah</div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
