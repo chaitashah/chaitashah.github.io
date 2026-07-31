@@ -21,20 +21,19 @@ fetch("stories.json")
   .then(stories => {
     const story = stories[0];
     const storyCircle = document.getElementById("story-circle");
+    const storyViewer = document.getElementById("story-viewer");
+    const storyImageLarge = document.getElementById("story-image-large");
 
     storyCircle.innerHTML = `
       <img src="${story.image}" alt="Story">
     `;
+
+    storyCircle.addEventListener("click", () => {
+      storyImageLarge.src = story.image;
+      storyViewer.style.display = "flex";
+    });
+
+    storyViewer.addEventListener("click", () => {
+      storyViewer.style.display = "none";
+    });
   });
-
-const storyViewer = document.getElementById("story-viewer");
-const storyImageLarge = document.getElementById("story-image-large");
-
-storyCircle.addEventListener("click", () => {
-  storyImageLarge.src = story.image;
-  storyViewer.style.display = "flex";
-});
-
-storyViewer.addEventListener("click", () => {
-  storyViewer.style.display = "none";
-});
