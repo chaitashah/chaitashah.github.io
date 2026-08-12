@@ -53,38 +53,51 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: center;
     }
 
     /* ==========================================================================
-       2. Layout & Container
+       2. Layout & Centered Container
        ========================================================================== */
     .container {
-      max-width: 1200px;
-      width: 92%;
+      max-width: 680px;
+      width: 90%;
       margin: 0 auto;
-      padding: 40px 20px 20px 20px;
+      padding: 60px 20px 40px 20px;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
     }
 
     .main-layout {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Legacy 2-column grid styling preserved for reactivation */
+    /*
+    .main-layout.grid-layout {
       display: grid;
       grid-template-columns: 1fr 380px;
       gap: 50px;
       align-items: start;
     }
+    */
 
     /* ==========================================================================
-       3. Left Column: Intro & Profile
+       3. Centered Intro & Profile
        ========================================================================== */
     .intro {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      gap: 16px;
+      gap: 20px;
+      width: 100%;
     }
 
     .profile-img {
@@ -92,6 +105,7 @@
       height: 175px;
       border-radius: 50%;
       object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
     .intro-text {
@@ -125,7 +139,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 24px;
-      margin-top: 15px;
+      margin-top: 20px;
       width: 100%;
     }
 
@@ -154,12 +168,13 @@
     .sayhi { background-color: #D2C6FA; }
 
     /* ==========================================================================
-       5. Right Column: Blog & Thoughts Card
+       5. Blog & Thoughts Styles (Preserved for Reactivation)
        ========================================================================== */
     .personal-blog {
       text-align: left;
       display: flex;
       flex-direction: column;
+      width: 100%;
     }
 
     .thoughts-card {
@@ -279,18 +294,22 @@
        ========================================================================== */
     footer {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 30px;
+      gap: 16px;
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 30px 20px;
+      padding: 30px 20px 40px 20px;
       font-size: 0.95rem;
+      text-align: center;
     }
 
     footer .socials {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 22px;
       align-items: center;
     }
@@ -311,109 +330,26 @@
     }
 
     /* ==========================================================================
-       7. Responsive Breakpoints
+       7. Responsive Tweaks
        ========================================================================== */
-
-    /* iPad / Tablet Layout */
-    @media (max-width: 1024px) {
-      .container {
-        width: 95%;
-        padding-top: 20px;
-      }
-
-      .main-layout {
-        grid-template-columns: 1fr 310px;
-        gap: 30px;
-      }
-
-      .links a {
-        width: 95px;
-        height: 95px;
-        font-size: 0.9rem;
-      }
-    }
-
-    /* Mobile Layout */
-    @media (max-width: 768px) {
-      .container {
-        padding: 24px 16px;
-      }
-
-      .main-layout {
-        grid-template-columns: 1fr;
-        gap: 48px;
-      }
-
-      .intro {
-        order: 1;
-      }
-
-      .links {
-        margin-top: 20px;
-        margin-bottom: 0;
-        gap: 16px;
-      }
-
-      .personal-blog {
-        order: 2;
-        align-items: center;
-        text-align: center;
-      }
-
-      .handle {
-        margin-bottom: 16px;
-      }
-
-      .story-circle {
-        margin-bottom: 28px;
-      }
-
-      /* Hide Thoughts Card strictly on Mobile */
-      .thoughts-card {
-        display: none !important;
-      }
-
-      .blog-grid {
-        width: 100%;
-        max-width: 360px;
-        margin: 0 auto;
-        gap: 12px;
-      }
-
-      .blog-item p {
-        text-align: left;
-        font-size: 0.8rem;
-      }
-
-      footer {
-        flex-direction: column;
-        gap: 14px;
-        text-align: center;
-        padding-top: 10px;
-        padding-bottom: 24px;
-      }
-
-      footer .socials {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px;
-      }
-    }
-
     @media (max-width: 480px) {
+      .container {
+        padding-top: 40px;
+      }
+
       .profile-img {
         width: 140px;
         height: 140px;
       }
 
       .links a {
-        width: 85px;
-        height: 85px;
-        font-size: 0.85rem;
+        width: 90px;
+        height: 90px;
+        font-size: 0.9rem;
       }
 
       .links {
-        gap: 12px;
+        gap: 14px;
       }
     }
   </style>
@@ -423,7 +359,7 @@
   <div class="container">
     <main class="main-layout">
       
-      <!-- Left Column: Intro & Navigation -->
+      <!-- Intro & Navigation -->
       <section class="intro">
         <img src="https://raw.githubusercontent.com/chaitashah/chaitashah.github.io/main/chaitalishah.jpg" alt="Chaitali Shah - Art Entrepreneur" class="profile-img">
         
@@ -442,7 +378,8 @@
         </nav>
       </section>
 
-      <!-- Right Column: Blog & Thoughts -->
+      <!-- DISABLED SECTIONS (UNCOMMENT BELOW TO REACTIVATE THOUGHTS & BLOG) -->
+      <!--
       <section class="personal-blog">
         <article class="thoughts-card">
           <h3>Thoughts</h3>
@@ -453,7 +390,6 @@
           </div>
         </article>
 
-        <!-- DISABLED IG STORIES AND HIGHLIGHTS BLOG GRID
         <h2>Personal Blog</h2>
         <div class="handle">@Chaitali</div>
         <div class="story-circle" id="story-circle"></div>
@@ -461,8 +397,8 @@
            <img id="story-image-large" src="" alt="Story">
         </div>
         <div class="blog-grid" id="blog-grid"></div>
-        -->
       </section>
+      -->
 
     </main>
   </div>
@@ -477,7 +413,8 @@
     <div class="copyright">© 2026 Chaitali Shah</div>
   </footer>
 
-  <!-- DISABLED SCRIPT FOR STORIES / HIGHLIGHTS
+  <!-- DISABLED SCRIPT (UNCOMMENT BELOW TO REACTIVATE INSTAGRAM STORIES / HIGHLIGHTS) -->
+  <!--
   <script src="script.js"></script>
   -->
 </body>
